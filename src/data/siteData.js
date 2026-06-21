@@ -70,7 +70,7 @@ export const prices = [
     cta: 'הזמנת ביקור',
   },
   {
-    name: 'ניקוי מקיף (A+ Deep Clean)',
+    name: 'ניקוי מקיף מקצועי',
     price: '390',
     unit: 'למזגן',
     featured: true,
@@ -84,7 +84,7 @@ export const prices = [
     cta: 'הזמינו עכשיו',
   },
   {
-    name: 'מילוי גז (Full)',
+    name: 'מילוי גז מלא',
     price: '280',
     unit: 'החל מ-',
     featured: false,

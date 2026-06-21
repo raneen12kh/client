@@ -64,15 +64,37 @@
   --text-caption: 12px;
 }
 
+html {
+  direction: rtl;
+}
+
 body {
-  font-family: "Heebo", sans-serif;
+  font-family: "Heebo", "Assistant", Arial, sans-serif;
   background-color: #f0f6ff;
   color: var(--color-on-surface);
+  direction: rtl;
+  text-align: right;
 }
 
 input,
-button {
+button,
+textarea,
+select {
   font-family: inherit;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"] {
+  direction: ltr;
+  text-align: left;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  direction: rtl;
+  text-align: right;
 }
 
 .material-symbols-outlined {

@@ -12,7 +12,7 @@ function Field({ id, label, type = 'text', value, onChange, placeholder, autoCom
 
   return (
     <div className="w-full">
-      <label htmlFor={id} className="block text-[14px] font-semibold text-primary mb-2 text-right">
+      <label htmlFor={id} className="block text-[14px] font-semibold text-primary mb-2">
         {label}
       </label>
       <input
@@ -25,7 +25,7 @@ function Field({ id, label, type = 'text', value, onChange, placeholder, autoCom
         onChange={onChange}
         placeholder={placeholder}
         dir={isLtr ? 'ltr' : 'rtl'}
-        className={`w-full rounded-xl border border-outline-variant bg-white px-4 py-3 text-[15px] text-on-surface outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary/20 ${isLtr ? 'text-left placeholder:text-left' : 'text-right'}`}
+        className="w-full rounded-xl border border-outline-variant bg-white px-4 py-3 text-[15px] text-on-surface outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary/20"
       />
     </div>
   );
@@ -113,7 +113,7 @@ function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen hero-gradient flex flex-col">
+    <div className="min-h-screen hero-gradient flex flex-col" dir="rtl" lang="he">
       {/* Header */}
       <header className="w-full border-b border-white/10">
         <div className="max-w-[1280px] mx-auto px-6 py-5 flex items-center justify-between">
@@ -147,12 +147,12 @@ function LoginPage() {
             {/* Card body */}
             <div className="px-8 py-7">
               {error && (
-                <div className="mb-5 rounded-xl bg-red-50 border border-red-200 text-red-700 px-4 py-3 text-[13px] text-right">
+                <div className="mb-5 rounded-xl bg-red-50 border border-red-200 text-red-700 px-4 py-3 text-[13px]">
                   {error}
                 </div>
               )}
               {success && (
-                <div className="mb-5 rounded-xl bg-green-50 border border-green-200 text-green-800 px-4 py-3 text-[13px] text-right">
+                <div className="mb-5 rounded-xl bg-green-50 border border-green-200 text-green-800 px-4 py-3 text-[13px]">
                   {success}
                 </div>
               )}
@@ -164,13 +164,13 @@ function LoginPage() {
                     label="אימייל"
                     type="email"
                     autoComplete="email"
-                    placeholder="you@example.com"
+                    placeholder="your@email.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
 
                   <div>
-                    <label htmlFor="password" className="block text-[14px] font-semibold text-primary mb-2 text-right">
+                    <label htmlFor="password" className="block text-[14px] font-semibold text-primary mb-2">
                       סיסמה
                     </label>
                     <input
@@ -181,13 +181,13 @@ function LoginPage() {
                       dir="ltr"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      placeholder="••••••••"
-                      className="w-full rounded-xl border border-outline-variant bg-white px-4 py-3 text-[15px] text-on-surface text-left outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                      placeholder="הזינו סיסמה"
+                      className="w-full rounded-xl border border-outline-variant bg-white px-4 py-3 text-[15px] text-on-surface outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary/20"
                     />
                     <button
                       type="button"
                       onClick={() => switchView('forgot')}
-                      className="mt-2 text-[13px] text-secondary font-medium hover:underline text-right w-full"
+                      className="mt-2 text-[13px] text-secondary font-medium hover:underline w-full text-start"
                     >
                       שכחתי סיסמה?
                     </button>
@@ -210,7 +210,7 @@ function LoginPage() {
                     label="אימייל"
                     type="email"
                     autoComplete="email"
-                    placeholder="you@example.com"
+                    placeholder="your@email.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
