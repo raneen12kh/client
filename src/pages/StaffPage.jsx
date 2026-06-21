@@ -20,9 +20,9 @@ function StaffPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" dir="rtl" lang="he">
       <header className="hero-gradient text-white px-4 md:px-[48px] py-6">
-        <div className="max-w-[1280px] mx-auto flex flex-row-reverse justify-between items-center">
+        <div className="max-w-[1280px] mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
             <span className="material-symbols-outlined text-secondary-container text-3xl">ac_unit</span>
             <span className="font-[Assistant] text-[22px] font-semibold">לוח בקרה — צוות</span>
@@ -48,7 +48,8 @@ function StaffPage() {
             שלום, {user.name}
           </h1>
           <p className="text-on-surface-variant mb-6">
-            התחברת בהצלחה כ{user.role === 'admin' ? 'מנהל/ת' : 'טכנאי/ת'} ({user.email})
+            התחברת בהצלחה כ{user.role === 'admin' ? 'מנהל/ת' : 'טכנאי/ת'}{' '}
+            (<span dir="ltr" className="inline-block">{user.email}</span>)
           </p>
           <p className="text-[14px] text-on-surface-variant">
             כאן יופיע לוח הבקרה של הצוות — ניהול תורים, לקוחות ועוד.

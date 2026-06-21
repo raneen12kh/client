@@ -4,7 +4,7 @@ function HowItWorks() {
   return (
     <section className="py-[80px] bg-white">
       <div className="max-w-[1280px] mx-auto px-[24px]">
-        <div className="flex flex-col md:flex-row-reverse items-center gap-16">
+        <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="w-full md:w-1/2">
             <h2 className="font-[Assistant] text-[28px] md:text-[32px] font-bold text-primary mb-6">
               איך זה עובד? פשוט ומהיר
